@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Usuário</title>
+</head>,
+<style>
+    /* Adicione isso ao seu CSS para a página de dashboard de usuário */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+li:hover {
+    background-color: #f5f5f5;
+}
+
+button {
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul ul {
+    margin-left: 20px;
+}
+
+#totalHours {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dff0d8;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+}
+
+/* Adicione estilos responsivos */
+
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    li {
+        padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}
+
+</style>
+<body>
+
+    <div class="container">
+        <h2>Bem-vindo ao Painel do Usuário</h2>
+
+        <div id="registrationForm">
+            <h3>Registro de Horas Trabalhadas</h3>
+            <label for="hours">Horas trabalhadas:</label>
+            <input type="number" id="hours" name="hours" min="0" required>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required>
+
+          <!-- Adicionando uma chamada para a função registerWork no clique do botão -->
+            <button type="button" onclick="registerWork()">Registrar</button>
+
+        </div>
+    </div>
+
+    <script src="dashboardScript.js"></script>
+</body>
+</html>
